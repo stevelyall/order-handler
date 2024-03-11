@@ -63,7 +63,9 @@ export default function handleOrder({
     const orderProcessor = new OrderProcessor();
     orderProcessor.processOrder(order);
   } catch (e) {
-    throw new Error(`Error processing order. ${e.message}`); // ensure processing error message passed to client
+    if (e instanceof Error) {
+      throw new Error(`Error processing order. ${e.message}`); // ensure processing error message passed to client
+    }
     // Caller should handle this error i.e. web service response 500 Internal Server Error, pass readable message to client
   }
   // Process order. Assumption: processing is done before calculation of cost

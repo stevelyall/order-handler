@@ -27,7 +27,9 @@ try {
   // i.e. req.status(200).send('Order processed successfully');
 }
 catch (e) {
-  console.error(e.message);
+  if (e instanceof Error) {
+    console.error(e.message);
+  }
   // provide response in error cases.
   // i.e. req.status(4xx).send(e.message);
 }
