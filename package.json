@@ -1,0 +1,33 @@
+{
+  "name": "order-handler-example",
+  "version": "0.1.0",
+  "description": "Boilerplate for TypeScript projects (Node.js and browser modules)",
+  "author": "stevelyall",
+  "repository": "https://github.com/stevelyall/order-handler-example",
+  "license": "MIT",
+  "main": "./dist/tsc/main.js",
+  "types": "./dist/tsc/main.d.ts",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+    "test": "jest",
+    "clean": "rm -rf dist build package",
+    "ts-node": "ts-node",
+    "docs": "typedoc --entryPoints src/main.ts",
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "esbuild": "^0.11.23",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^7.22.0",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.20.35",
+    "typescript": "^4.2.3"
+  }
+}
