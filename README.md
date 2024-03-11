@@ -1,3 +1,5 @@
+![Build Status](https://github.com/stevelyall/order-handler/actions/workflows/lint-and-test.yml/badge.svg)
+
 # Order Handler Module for Hypothetical Order Management System
 
 Example Typescript code that recieves order details from an unknown consumer, then creates, validates, processes and calculates the order.
